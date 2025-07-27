@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.next/
+/out/
+
+# Next.js
+next-env.d.ts
+*.tsbuildinfo
+
+# tsup build outputs
+/modelcontextprotocol/
+/ai-sdk/
+/openai/
+/langchain/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Coverage
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db 

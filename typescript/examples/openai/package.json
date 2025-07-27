@@ -1,0 +1,17 @@
+{
+  "name": "kakaopay-agent-toolkit-examples-openai",
+  "version": "0.1.0",
+  "description": "KakaoPay Agent Toolkit OpenAI Example",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@kakaopay-develop/agent-toolkit": "0.1.0",
+    "dotenv": "^16.4.5",
+    "openai": "^4.86.1",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
+  }
+}
