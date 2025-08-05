@@ -27,7 +27,7 @@ export const demoPaymentParameters = (_context: Context = {}): z.AnyZodObject =>
       .positive()
       .default(1000)
       .describe('상품 총액'),
-    link_type: z.enum(['PC', 'MOBILE']).default('MOBILE').describe('링크 유형'),
+    link_type: z.enum(['PC', 'MOBILE']).default('PC').describe('링크 유형'),
   });
 
 type ReadyPaymentType = z.infer<typeof ReadyPaymentSchema>;

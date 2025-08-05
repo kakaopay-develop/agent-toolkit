@@ -1,6 +1,6 @@
 {
   "name": "@kakaopay-develop/mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "KakaoPay MCP server",
   "bin": "dist/index.js",
   "files": [
@@ -23,7 +23,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@kakaopay-develop/agent-toolkit": "0.1.0",
+    "@kakaopay-develop/agent-toolkit": "0.1.1",
     "@modelcontextprotocol/sdk": "^1.6.1",
     "colors": "^1.4.0"
   },

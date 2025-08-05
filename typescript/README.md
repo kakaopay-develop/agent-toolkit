@@ -2,6 +2,10 @@
 
 KakaoPay Agent Toolkit은 AI 에이전트 프레임워크(LangChain, Vercel AI SDK, OpenAI SDK)가 function calling을 통해 KakaoPay 오픈 API와 연동할 수 있도록 지원합니다. AI 에이전트와 애플리케이션에서 결제, 정기결제, 상태 조회 등의 워크플로우를 쉽게 구축할 수 있는 도구를 제공합니다.
 
+## 준비하기
+
+자세한 준비 사항은 [카카오페이 개발자 문서 - AI 연동 - 사전 준비사항](https://developers.kakaopay.com/docs/payment/online/ai#payment-ai-intro-prepare)을 참조하세요.
+
 ## 지원 프레임워크
 
 - **LangChain** - LangChain 지원
@@ -242,3 +246,7 @@ npm run build   # 빌드
 npm run lint    # 린트
 npm run dev     # 개발 모드 (watch)
 ```
+
+## Disclaimer
+
+`@kakaopay-develop/agent-toolkit`은 AI 기반 자동화 도구로, 결과의 정확성이나 완전성을 보장하지 않습니다. 실제 결제 등 중요한 작업 전에는 반드시 별도의 검증을 거치시기 바랍니다. 카카오페이는 본 도구의 사용 결과에 대해 책임지지 않습니다.

@@ -2,6 +2,10 @@
 
 카카오페이 Agent Toolkit은 OpenAI Agent SDK, LangChain, Vercel AI SDK, Model Context Protocol(MCP) 등 다양한 에이전트 프레임워크에서 카카오페이 API를 함수 호출(Function Calling) 방식으로 연동할 수 있도록 지원합니다. 이 툴킷은 TypeScript와 MCP 환경 모두를 지원하며, 결제·정기 결제·상태조회·취소 등 AI 에이전트 및 애플리케이션을 위한 다양한 결제 플로우를 쉽게 구현할 수 있습니다.
 
+## 준비하기
+
+자세한 준비 사항은 [카카오페이 개발자 문서 - AI 연동 - 사전 준비사항](https://developers.kakaopay.com/docs/payment/online/ai#payment-ai-intro-prepare)을 참조하세요.
+
 ## 지원 프레임워크
 
 - **Vercel AI SDK** - `@kakaopay-develop/agent-toolkit/ai-sdk`
@@ -27,25 +31,25 @@
 
 ## 사용 시나리오
 
-### TypeScript SDK 사용 시
-AI 프레임워크(LangChain, Vercel AI SDK, OpenAI 등)에서 카카오페이 API를 연동하고 싶을 때 사용합니다.
+### MCP 서버 사용 시
+
+MCP 지원 도구(Claude Desktop, Cursor, Windsurf 등)에서 카카오페이를 연동하고 싶을 때 선택합니다.
 
 **주요 특징:**
-- 다양한 AI 프레임워크 지원
-- TypeScript로 타입 안전성 보장
-- 함수 호출(Function Calling) 방식으로 연동
+- MCP 표준 프로토콜 지원
+- 설정만으로 즉시 사용 가능
+
+**[📖 MCP 서버 상세 가이드](./modelcontextprotocol/README.md)** - MCP 호스트 연동 방법, 설정 옵션 등
+
+### TypeScript SDK 사용 시
+
+특정 AI 프레임워크(LangChain, Vercel AI SDK, OpenAI SDK)와 카카오페이를 연동하고 싶을 때 선택합니다.
+
+**주요 특징:**
+- LangChain, Vercel AI SDK, OpenAI SDK 등 다양한 프레임워크 지원
+- 연동 애플리케이션 개발 가능
 
 **[📖 TypeScript SDK 상세 가이드](./typescript/README.md)** - AI 프레임워크 연동 방법, 설정 옵션, 예제 등
-
-### MCP 서버 사용 시
-MCP 호스트(Cursor, Claude Desktop 등)에서 카카오페이 기능을 사용하고 싶을 때 사용합니다.
-
-**주요 특징:**
-- MCP 표준을 따르는 서버
-- Cursor, Claude 등에서 즉시 사용 가능
-- 명령행에서 직접 실행
-
-**[📖 MCP 서버 상세 가이드](./modelcontextprotocol/README.md)** - MCP 호스트 연동 방법, 설정 옵션, 디버깅 등
 
 ## 프로젝트 구조
 
@@ -73,3 +77,7 @@ kakaopay/agent-toolkit/
 ## 라이선스
 
 MIT License 
+
+## Disclaimer
+
+카카오페이 Agent Toolkit은 AI 기반 자동화 도구로, 결과의 정확성이나 완전성을 보장하지 않습니다. 실제 결제 등 중요한 작업 전에는 반드시 별도의 검증을 거치시기 바랍니다. 카카오페이는 본 도구의 사용 결과에 대해 책임지지 않습니다. 

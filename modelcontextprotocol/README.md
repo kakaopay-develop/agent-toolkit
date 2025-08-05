@@ -2,6 +2,10 @@
 
 카카오페이 [Model Context Protocol](https://modelcontextprotocol.com/) 서버는 함수 호출(Function Calling) 방식으로 카카오페이 오픈 API를 연동할 수 있도록 지원합니다. 결제 및 정기결제 등 다양한 카카오페이 기능을 MCP 호스트(Claude, Cursor 등)에서 사용할 수 있습니다.
 
+## 준비하기
+
+자세한 준비 사항은 [카카오페이 개발자 문서 - AI 연동 - 사전 준비사항](https://developers.kakaopay.com/docs/payment/online/ai#payment-ai-intro-prepare)를 참조하세요.
+
 ## 시작하기
 
 ### 실행 예시
@@ -84,6 +88,6 @@ npx @modelcontextprotocol/inspector node dist/index.js --tools=all --secret-key=
 
 시크릿 키는 외부에 노출되지 않도록 안전하게 관리하세요.
 
-## 면책 조항(Disclaimer)
+## Disclaimer
 
 `@kakaopay-develop/mcp`는 AI 기반 자동화 도구로, 결과의 정확성이나 완전성을 보장하지 않습니다. 실제 결제 등 중요한 작업 전에는 반드시 별도의 검증을 거치시기 바랍니다. 카카오페이는 본 도구의 사용 결과에 대해 책임지지 않습니다.

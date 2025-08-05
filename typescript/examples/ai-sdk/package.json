@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@kakaopay-develop/agent-toolkit": "0.1.0",
+    "@kakaopay-develop/agent-toolkit": "0.1.1",
     "@ai-sdk/openai": "^0.0.63",
     "ai": "^4.0.0",
     "dotenv": "^16.4.5",
