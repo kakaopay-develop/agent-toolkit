@@ -15,6 +15,7 @@ next-env.d.ts
 /ai-sdk/
 /openai/
 /langchain/
+/bedrock/
 
 # IDE
 .vscode/

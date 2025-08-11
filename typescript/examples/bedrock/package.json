@@ -1,0 +1,19 @@
+{
+  "name": "kakaopay-agent-toolkit-examples-bedrock",
+  "version": "0.1.0",
+  "description": "KakaoPay Agent Toolkit Bedrock Example",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@kakaopay-develop/agent-toolkit": "0.1.2",
+    "@dotenvx/dotenvx": "^1.32.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.842.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

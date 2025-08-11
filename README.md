@@ -11,6 +11,7 @@
 - **Vercel AI SDK** - `@kakaopay-develop/agent-toolkit/ai-sdk`
 - **LangChain** - `@kakaopay-develop/agent-toolkit/langchain`
 - **OpenAI SDK** - `@kakaopay-develop/agent-toolkit/openai`
+- **Amazon Bedrock** - `@kakaopay-develop/agent-toolkit/bedrock`
 - **Model Context Protocol (MCP)** - `@kakaopay-develop/agent-toolkit/modelcontextprotocol`
 
 ## 지원 도구
@@ -46,7 +47,7 @@ MCP 지원 도구(Claude Desktop, Cursor, Windsurf 등)에서 카카오페이를
 특정 AI 프레임워크(LangChain, Vercel AI SDK, OpenAI SDK)와 카카오페이를 연동하고 싶을 때 선택합니다.
 
 **주요 특징:**
-- LangChain, Vercel AI SDK, OpenAI SDK 등 다양한 프레임워크 지원
+- 다양한 프레임워크 지원
 - 연동 애플리케이션 개발 가능
 
 **[📖 TypeScript SDK 상세 가이드](./typescript/README.md)** - AI 프레임워크 연동 방법, 설정 옵션, 예제 등
@@ -61,11 +62,13 @@ kakaopay/agent-toolkit/
 │   │   ├── ai-sdk/               # AI SDK 연동용 툴킷
 │   │   ├── langchain/            # LangChain 연동용 툴킷
 │   │   ├── openai/               # OpenAI function calling 연동용 툴킷
+│   │   ├── bedrock/              # Amazon Bedrock 연동용 툴킷
 │   │   └── modelcontextprotocol/ # MCP TypeScript 모듈
 │   └── examples/
 │       ├── ai-sdk/               # AI SDK 연동 예제
 │       ├── langchain/            # LangChain SDK 연동 예제
 │       ├── openai/               # OpenAI 연동 예제
+│       ├── bedrock/              # Amazon Bedrock 연동 예제
 │       └── mcp-bot/              # 챗봇 UI 예제
 └── modelcontextprotocol/         # MCP 서버
 ```

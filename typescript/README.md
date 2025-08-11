@@ -11,6 +11,7 @@ KakaoPay Agent Toolkit은 AI 에이전트 프레임워크(LangChain, Vercel AI S
 - **LangChain** - LangChain 지원
 - **Vercel AI SDK** - Vercel AI SDK 지원
 - **OpenAI** - OpenAI SDK 지원
+- **Amazon Bedrock** - Amazon Bedrock 지원
 - **Model Context Protocol (MCP)** - MCP 지원
 
 ## 설치
@@ -154,6 +155,47 @@ const completion = await openai.chat.completions.create({
 });
 ```
 
+### Amazon Bedrock
+
+```typescript
+import { KakaoPayAgentToolkit } from '@kakaopay-develop/agent-toolkit/bedrock';
+import {
+  BedrockRuntimeClient,
+  ConverseCommand,
+} from '@aws-sdk/client-bedrock-runtime';
+
+const kakaopayToolkit = new KakaoPayAgentToolkit({
+  secretKey: process.env.KAKAOPAY_SECRET_KEY!,
+  configuration: {
+    context: { cid: 'TC0ONETIME' },
+    actions: { payment: { demo: true } },
+  },
+});
+
+const client = new BedrockRuntimeClient({
+  region: 'ap-northeast-2',
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
+});
+
+const tools = kakaopayToolkit.getTools();
+
+const response = await client.send(
+  new ConverseCommand({
+    modelId: 'anthropic.claude-3-haiku-20240307-v1:0',
+    messages: [
+      {
+        role: 'user',
+        content: [{ text: '5000원짜리 커피 결제 링크 생성해 줘' }],
+      },
+    ],
+    toolConfig: { tools: tools },
+  })
+);
+```
+
 ## 컨텍스트 설정
 
 기본값으로 사용할 컨텍스트 값을 제공할 수 있습니다:
@@ -204,6 +246,7 @@ main().catch((error) => {
 - `examples/ai-sdk/` - Vercel AI SDK 예제
 - `examples/langchain/` - LangChain 예제
 - `examples/openai/` - OpenAI SDK 예제
+- `examples/bedrock/` - Amazon Bedrock 예제
 - `examples/mcp-bot/` - MCP 기반 챗봇 예제
 
 ### 예제 실행
@@ -212,17 +255,22 @@ main().catch((error) => {
 # AI SDK 예제
 cd examples/ai-sdk
 npm install
-npx ts-node index.ts
+npx ts-node index.ts --env
 
 # LangChain 예제
 cd examples/langchain
 npm install
-npx ts-node index.ts
+npx ts-node index.ts --env
 
 # OpenAI 예제
 cd examples/openai
 npm install
-npx ts-node index.ts
+npx ts-node index.ts --env
+
+# Bedrock 예제
+cd examples/bedrock
+npm install
+npx ts-node index.ts --env
 
 # MCP Bot 예제
 cd examples/mcp-bot
@@ -235,8 +283,15 @@ npm run dev
 다음 환경 변수를 설정해야 합니다:
 
 ```bash
-KAKAOPAY_SECRET_KEY=your_kakaopay_secret_key_here  # KakaoPay 오픈 API 시크릿 키
-OPENAI_API_KEY=your_openai_api_key_here            # AI 모델 사용 시 필요
+ # KakaoPay 오픈 API 시크릿 키
+KAKAOPAY_SECRET_KEY=your_kakaopay_secret_key_here
+
+# OpenAI 모델 사용 시 필요
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Amazon Bedrock 사용 시 필요
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 ```
 
 ## 개발 / 테스트 / 빌드

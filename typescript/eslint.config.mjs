@@ -21,6 +21,7 @@ export default [
       'ai-sdk/**',
       'openai/**',
       'langchain/**',
+      'bedrock/**',
       'dist/**',
       'build/**',
       'node_modules/**',
@@ -32,6 +33,10 @@ export default [
       'yarn.lock',
       'tsconfig.json',
       'jest.config.js',
+      'examples/**/.next/**',
+      'examples/**/types/**',
+      '.next/**',
+      'types/**',
     ],
   },
   

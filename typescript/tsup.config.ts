@@ -29,4 +29,11 @@ export default defineConfig([
     dts: true,
     sourcemap: true,
   },
+  {
+    entry: ['src/bedrock/index.ts'],
+    outDir: 'bedrock',
+    format: ['cjs', 'esm'],
+    dts: true,
+    sourcemap: true,
+  },
 ]);

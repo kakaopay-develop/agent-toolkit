@@ -1,6 +1,6 @@
 {
   "name": "@kakaopay-develop/agent-toolkit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "KakaoPay Agent Toolkit",
   "homepage": "https://github.com/kakaopay-develop/agent-toolkit",
   "repository": {
@@ -19,7 +19,7 @@
     "lint": "eslint \"./**/*.ts*\"",
     "prettier": "prettier './**/*.{js,ts,md,html,css}' --write",
     "prettier-check": "prettier './**/*.{js,ts,md,html,css}' --check",
-    "clean": "rm -rf modelcontextprotocol ai-sdk openai langchain",
+    "clean": "rm -rf modelcontextprotocol ai-sdk openai langchain bedrock",
     "dev": "tsup --watch"
   },
   "exports": {
@@ -42,6 +42,11 @@
       "types": "./langchain/index.d.ts",
       "require": "./langchain/index.js",
       "import": "./langchain/index.mjs"
+    },
+    "./bedrock": {
+      "types": "./bedrock/index.d.ts",
+      "require": "./bedrock/index.js",
+      "import": "./bedrock/index.mjs"
     }
   },
   "dependencies": {
@@ -85,6 +90,7 @@
     "ai-sdk/**/*",
     "openai/**/*",
     "langchain/**/*",
+    "bedrock/**/*",
     "LICENSE",
     "README.md",
     "package.json"
